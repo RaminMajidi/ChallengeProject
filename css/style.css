@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+:root{
+    --color-wite:#fdfdfd;
+    --color-black:#1B2430;
+    --color-Pea :#eee8aa;
+    --color-green:#5FD068;
+    --color-red:rgb(248, 18, 18);
+    --color-blue:rgb(119, 139, 255);
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* Style For Header */
+/* ***************************************************************** */
+/* ***************************************************************** */
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 10px 5px;
+    background-color: var(--color-wite);
+    top: 0;
+    z-index: 100;
+}
+header i{
+    color:var(--color-black);
+    margin: 0 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.bx-heart.like{
+   color:var(--color-red);
+}
+.social-icons i{
+    border: 1px solid var(--color-black);
+    padding: 2px;
+    border-radius: 50%;
+    transition: all .3s ease-in;
+}
+.social-icons i:hover{
+    background-color: var(--color-blue);
+    color: var(--color-wite);
+    border-color: transparent;
+}
+/* Style For Navbar */
+/* ***************************************************************** */
+/* ***************************************************************** */
+nav{
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    background-color: var(--color-Pea);
+    height: 8vh;
+    z-index: 100;
+}
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.menu-container a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-black);
+    margin: 10px;
+    padding:3px 5px;
+    transition: all .5s ease-in-out;
+    border-radius: 32px;
+}
+.menu-container a:hover{
+    background-color:var(--color-black);
+    color: var(--color-wite);
+}
+.menu-icon{
+    display: none;
+}
+/* Style For Landing Page */
+/* ***************************************************************** */
+/* ***************************************************************** */
+.landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:18vh;
+    height:100vh;
+    width: 100%;
+    background: url(../images/background.png) center fixed no-repeat ;
+    background-size: cover;
+}
+.landing-page .landing-title{
+font-size: 2.5rem;
+padding-left: 1.3rem;
+}
+.landing-page .landing-desc{
+    font-size: 1.2rem;
+    padding-left: 1.3rem;
+}
+.landing-page .landing-btn{
+    margin-left:1.3rem ;
+    margin-top: 1rem;
+    padding: 2px 20px;
+    background-color: transparent;
+    font-size: 1rem;
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+.landing-page .landing-btn:hover{
+    background-color: var(--color-green);
+    border-color: transparent;
+}
+/* Style For Servises Section */
+/* ***************************************************************** */
+/* ***************************************************************** */
+
+.servise-container{
+width: 100%;
+min-height:82vh;
+}
+.section-title{
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.servise-container .servises,
+.servise-container .offers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin:auto;
+    padding:10px 5px;
+    max-width: 1300px;
+}
+.servises .card-servise{
+    width:90%;
+    max-width:350px;
+    height: 60vh;
+    margin:15px 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.card-servise .card-image{
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+  
+}
+.card-image img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    cursor: zoom-in;
+}
+.card-image img:hover{
+    transform: scale(1.4);
+}
+.card-servise .card-title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5rem;
+}
+.card-servise .card-desc{
+    width: 100%;
+    height: 35%;
+}
+.card-servise .card-desc-text{
+    text-align: center;
+    padding: 0 5px;
+}
+.card-servise .card-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px auto;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100px;
+    border:  2px solid var(--color-black);
+    color: var(--color-black);
+    transition: all .4s ease-in-out;
+}
+.card-servise .card-btn:hover,
+.offer-card-text .offer-card-btn:hover{
+    background-color: var(--color-Pea);
+}
+
+/* Style For Offer Cards */
+/* ***************************************************************** */
+/* ***************************************************************** */
+.offers{
+    height: 82vh;
+}
+.offers .offer-card{
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: 40vh;
+    border: 2px solid #8a9bb3;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    margin: 15px 10px;
+    transition: all .5s ease-in;
+    transform: scale(.9);
+}
+.offers .offer-card-image{
+    width: 100%;
+    height: 100%;
+}
+.offer-card-image img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.offers .offer-card:hover{
+    top: -15px;
+    transform: scale(1);
+    z-index: 30;
+}
+.offers .offer-card-text{
+    position: absolute;
+    top: 0;
+    padding: 15px 20px;
+}
+.offer-card-text .offer-card-title{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.offer-card-text .offer-card-desc{
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.offer-card-text .offer-card-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100px;
+    border:  2px solid var(--color-black);
+    color: var(--color-black);
+    transition: all .4s ease-in-out;  
+}
+
+
+
+/* Style For Responsive */
+/* ***************************************************************** */
+/* ***************************************************************** */
+@media(max-width:700px){
+    header i{
+        margin: 0 1px;
+        font-size: 1.5rem;
+    }
+    .menu-icon{
+        display: inline-block;
+        padding: 10px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    .menu-container{
+        display: none;
+    }
+    .menu-container.active{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        background-color: var(--color-Pea);
+    }
+    .menu-container a{
+        padding: 8px;
+    }
+}
